@@ -1,0 +1,26 @@
+{
+  "name": "christofer-portfolio",
+  "version": "1.0.0",
+  "description": "Christofer A. Bautista's Portfolio Website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "http-server . -p 3000 -o",
+    "start": "http-server . -p 3000 -o",
+    "build": "echo 'Build completed - ready for deployment'",
+    "preview": "http-server . -p 4173 -o"
+  },
+  "keywords": [
+    "portfolio",
+    "react",
+    "tailwind",
+    "javascript"
+  ],
+  "author": "Christofer A. Bautista <tofer.bautista.06@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
