@@ -11,15 +11,9 @@ const Projects = () => {
             type: "Current Project",
             year: "2025",
             category: "web",
-            description: "Comprehensive ecommerce solution for dental professionals featuring advanced mobile app and sophisticated web-based seller center",
-            awards: [
-                "🚀 Live Production Application serving real users",
-                "💼 Full-stack Development with modern architecture",
-                "📱 Cross-platform Mobile App with native performance",
-                "🌐 React-based Seller Dashboard with analytics"
-            ],
+            description: "Comprehensive ecommerce solution for dental professionals featuring advanced mobile app and sophisticated web-based seller center. Set to be released by February 2026, this full-stack platform combines Flutter mobile development with a React-based seller dashboard for complete business management.",
             tech: ["Flutter", "React", "Ecommerce", "Healthcare"],
-            icon: "🦷",
+            iconImage: "assets/images/dentpal_logo.png",
             liveLink: "https://dentpal-store.web.app",
             linkText: "View Live Site",
             gradient: "from-blue-500 via-cyan-500 to-teal-500",
@@ -31,11 +25,6 @@ const Projects = () => {
             year: "2024",
             category: "mobile",
             description: "AI-powered fitness application with advanced image classification for intelligent gym equipment identification and personalized workout recommendations",
-            awards: [
-                "🥈 1st Runner Up - Best Implementation Innovative Thesis",
-                "🥈 1st Runner Up - Best Video Output Presentation", 
-                "🏆 Champion - Best Poster Design Competition"
-            ],
             tech: ["Flutter", "Dart", "AI/ML", "Image Classification"],
             icon: "💪",
             liveLink: "https://apkpure.com/getfit/com.example.getfit",
@@ -49,15 +38,9 @@ const Projects = () => {
             year: "2025",
             category: "web",
             description: "Professional business website with cutting-edge design, seamless user experience, and optimized performance metrics",
-            awards: [
-                "🌐 Live Production Website with high traffic",
-                "📱 Mobile Responsive with perfect scores",
-                "⚡ Fast Loading with optimized performance",
-                "🎨 Modern UI/UX Design with accessibility features"
-            ],
             tech: ["Web Development", "Responsive Design", "UI/UX"],
-            icon: "🌟",
-            liveLink: "https://sprinrayphilippines.com",
+            iconImage: "assets/images/sprintray.png",
+            liveLink: "https://sprintrayph.com",
             linkText: "Visit Website",
             gradient: "from-green-500 via-emerald-500 to-teal-500",
             bgGradient: "from-green-500/10 to-emerald-500/10"
@@ -68,15 +51,9 @@ const Projects = () => {
             year: "2025",
             category: "web",
             description: "Sophisticated business website showcasing professional web development capabilities with enterprise-level features",
-            awards: [
-                "🚀 Production Ready with enterprise hosting",
-                "💼 Business Solution with CRM integration",
-                "🎯 User-Focused Design with conversion optimization",
-                "📊 Performance Optimized with analytics tracking"
-            ],
             tech: ["Web Development", "Business Solutions", "Frontend"],
-            icon: "🦌",
-            liveLink: "https://rundeerphilipines.com",
+            iconImage: "assets/images/rundeer.png",
+            liveLink: "https://rundeerph.com",
             linkText: "Visit Website",
             gradient: "from-orange-500 via-yellow-500 to-amber-500",
             bgGradient: "from-orange-500/10 to-yellow-500/10"
@@ -87,11 +64,6 @@ const Projects = () => {
             year: "2023",
             category: "mobile",
             description: "Innovative school learning material mobile application developed under extreme time constraints in competitive environment",
-            awards: [
-                "🏆 1st Place - Local Division Championship",
-                "⏱️ Developed in 8 hours - Speed coding challenge",
-                "🎓 Educational Innovation Award"
-            ],
             tech: ["Mobile Development", "Android Studio", "Java"],
             icon: "🏆",
             gradient: "from-indigo-500 via-purple-500 to-pink-500",
@@ -103,11 +75,6 @@ const Projects = () => {
             year: "2024",
             category: "web",
             description: "Enterprise-level contribution to comprehensive bus booking and management system with quality assurance excellence",
-            awards: [
-                "✅ Quality Assurance Testing with zero critical bugs",
-                "📋 User Manual Creation for enterprise deployment",
-                "🔧 DevOps Integration and deployment support"
-            ],
             tech: ["Web Development", "Quality Assurance", "DevOps"],
             icon: "🚌",
             gradient: "from-gray-500 via-slate-500 to-zinc-500",
@@ -222,8 +189,20 @@ const Projects = () => {
                                 {/* Project Header */}
                                 <div className="relative z-10 mb-6">
                                     <div className="flex items-start gap-4 mb-4">
-                                        <div className={`text-5xl transition-all duration-300 ${hoveredProject === index ? 'scale-125 rotate-12' : ''}`}>
-                                            {project.icon}
+                                        <div className={`transition-all duration-300 ${hoveredProject === index ? 'scale-125 rotate-12' : ''}`}>
+                                            {project.iconImage ? (
+                                                <img 
+                                                    src={project.iconImage} 
+                                                    alt={project.title}
+                                                    className="w-16 h-16 object-contain rounded-lg"
+                                                    onError={(e) => {
+                                                        e.target.style.display = 'none';
+                                                        e.target.parentNode.innerHTML = `<span class="text-5xl">${project.icon || '🎯'}</span>`;
+                                                    }}
+                                                />
+                                            ) : (
+                                                <span className="text-5xl">{project.icon}</span>
+                                            )}
                                         </div>
                                         <div className="flex-1">
                                             <h3 className={`text-xl font-bold bg-gradient-to-r ${project.gradient} bg-clip-text text-transparent mb-2`}>
@@ -242,34 +221,6 @@ const Projects = () => {
                                     <p className="text-gray-300 leading-relaxed mb-4">
                                         {project.description}
                                     </p>
-                                </div>
-                                
-                                {/* Awards & Recognition */}
-                                <div className="relative z-10 mb-6">
-                                    <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
-                                        🏆 Awards & Recognition
-                                    </h4>
-                                    <div className={`space-y-2 transition-all duration-300 ${
-                                        selectedProject === index ? 'max-h-96' : 'max-h-20 overflow-hidden'
-                                    }`}>
-                                        {project.awards.map((award, idx) => (
-                                            <div key={idx} className="flex items-start gap-3 p-2 bg-gray-900/50 backdrop-blur-sm rounded-lg border border-gray-600">
-                                                <div className={`w-2 h-2 bg-gradient-to-r ${project.gradient} rounded-full mt-2 flex-shrink-0`}></div>
-                                                <span className="text-gray-300 text-sm">{award}</span>
-                                            </div>
-                                        ))}
-                                    </div>
-                                    {project.awards.length > 2 && (
-                                        <button 
-                                            className="text-blue-400 text-xs mt-2 hover:text-blue-300 transition-colors"
-                                            onClick={(e) => {
-                                                e.stopPropagation();
-                                                setSelectedProject(selectedProject === index ? null : index);
-                                            }}
-                                        >
-                                            {selectedProject === index ? 'Show Less' : 'Show All Awards'}
-                                        </button>
-                                    )}
                                 </div>
                                 
                                 {/* Tech Stack */}

@@ -11,8 +11,8 @@ const About = () => {
     ];
 
     const stats = [
-        { number: '5+', label: 'Years Experience', icon: '💼', color: 'from-blue-400 to-cyan-400' },
-        { number: '50+', label: 'Projects Completed', icon: '🚀', color: 'from-purple-400 to-pink-400' },
+        { number: '2+', label: 'Years Experience', icon: '💼', color: 'from-blue-400 to-cyan-400' },
+        { number: '5+', label: 'Projects Completed', icon: '🚀', color: 'from-purple-400 to-pink-400' },
         { number: '15+', label: 'Technologies', icon: '⚡', color: 'from-green-400 to-emerald-400' },
         { number: '99%', label: 'Client Satisfaction', icon: '⭐', color: 'from-yellow-400 to-orange-400' }
     ];
@@ -22,27 +22,27 @@ const About = () => {
             title: "My Journey",
             icon: "🌟",
             content: [
-                "Started as a curious developer 5+ years ago, I've evolved into a full-stack engineer passionate about creating exceptional digital experiences.",
-                "Currently developing innovative ecommerce platforms for healthcare professionals while working in Makati City, I specialize in Flutter mobile development and React web applications.",
-                "My approach combines technical excellence with design thinking to deliver solutions that bridge the gap between beautiful design and clean, efficient code."
+                "My curiosity in development, software, and IT started when I was a kid—from learning the basics of opening MS Word to discovering the fascinating world of coding.",
+                "After graduating with a Bachelor of Science in Information Technology from STI College Batangas, I became an IT Instructor for one year. This experience helped me develop my interpersonal skills and deepen my understanding of programming—learning to explain technical concepts both in professional terms and in layman's language.",
+                "I also gained valuable experience in setting up Meta Ads campaigns and creating conversion pixels for analysis. Currently, I'm working on an ecommerce application using Flutter and React JS. My goal as a developer is not just to become good at coding, but to provide better insights on how IT can enhance websites and digital experiences."
             ]
         },
         passion: {
             title: "What Drives Me",
             icon: "💡",
             content: [
-                "I'm passionate about transforming complex problems into elegant, user-friendly solutions that people love to use.",
-                "With a keen eye for UI/UX principles and user-centered design, I focus on creating digital solutions that are both functional and delightful.",
-                "Continuous learning is my superpower - I stay ahead of industry trends and emerging technologies to deliver cutting-edge solutions."
+                "What drives me right now is keeping up with technology. The fast-paced evolution of AI has made me realize that I need to continuously improve my skillset—not just the fundamentals.",
+                "Currently, I'm in the phase of becoming a marketing-focused developer. I've learned that no matter how well a website exists, if it's not properly marketed, it becomes useless.",
+                "This unique combination of development and marketing expertise is what sets me apart from the competition, allowing me to create solutions that are both technically sound and strategically positioned for success."
             ]
         },
         achievements: {
             title: "My Impact",
             icon: "🏆",
             content: [
-                "Multiple award-winning projects with live applications serving real users in production environments.",
-                "Successfully developed ecommerce platforms focusing on intuitive user interfaces and seamless user journeys.",
-                "As an IT Instructor, I've mentored numerous developers, sharing knowledge and fostering the next generation of tech talent."
+                "While I have only a few achievements yet, the one I find most fulfilling is becoming an IT Instructor. Being able to help young learners realize they can succeed, providing insights, and explaining complicated concepts in ways students can understand—this helped me develop my ability to communicate and share my thoughts effectively.",
+                "My next achievement is applying my skills to both marketing and development. In the current phase of my career, this is my edge among competitors.",
+                "I focus on delivering comprehensive solutions that bridge the gap between technical excellence and market effectiveness, ensuring that every project I work on not only functions beautifully but also reaches its intended audience."
             ]
         }
     };

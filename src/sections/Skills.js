@@ -10,7 +10,6 @@ const Skills = () => {
         programming: [
             { 
                 name: 'React', 
-                level: 95, 
                 icon: '⚛️', 
                 color: 'from-cyan-400 to-blue-500',
                 description: 'Advanced component architecture & hooks',
@@ -18,7 +17,6 @@ const Skills = () => {
             },
             { 
                 name: 'Flutter', 
-                level: 90, 
                 icon: '📱', 
                 color: 'from-blue-400 to-indigo-500',
                 description: 'Cross-platform mobile development',
@@ -26,7 +24,6 @@ const Skills = () => {
             },
             { 
                 name: 'Android Studio', 
-                level: 85, 
                 icon: '🤖', 
                 color: 'from-green-400 to-emerald-500',
                 description: 'Native Android app development',
@@ -34,7 +31,6 @@ const Skills = () => {
             },
             { 
                 name: 'Java', 
-                level: 88, 
                 icon: '☕', 
                 color: 'from-orange-400 to-red-500',
                 description: 'Object-oriented programming & Spring',
@@ -42,7 +38,6 @@ const Skills = () => {
             },
             { 
                 name: 'TypeScript', 
-                level: 87, 
                 icon: '🔷', 
                 color: 'from-blue-500 to-purple-500',
                 description: 'Type-safe JavaScript development',
@@ -50,7 +45,6 @@ const Skills = () => {
             },
             { 
                 name: 'JavaScript', 
-                level: 92, 
                 icon: '🚀', 
                 color: 'from-yellow-400 to-orange-500',
                 description: 'ES6+ & modern frameworks',
@@ -58,7 +52,6 @@ const Skills = () => {
             },
             { 
                 name: 'HTML/CSS', 
-                level: 95, 
                 icon: '🎨', 
                 color: 'from-pink-400 to-red-500',
                 description: 'Responsive design & animations',
@@ -66,7 +59,6 @@ const Skills = () => {
             },
             { 
                 name: 'Tailwind CSS', 
-                level: 90, 
                 icon: '💨', 
                 color: 'from-teal-400 to-cyan-500',
                 description: 'Utility-first CSS framework',
@@ -74,20 +66,18 @@ const Skills = () => {
             }
         ],
         database: [
-            { name: 'MySQL', level: 85, icon: '🐬', color: 'from-blue-400 to-blue-600', description: 'Relational database design & optimization' },
-            { name: 'PostgreSQL', level: 80, icon: '🐘', color: 'from-indigo-400 to-purple-600', description: 'Advanced SQL queries & procedures' },
-            { name: 'Firebase', level: 88, icon: '🔥', color: 'from-orange-400 to-red-500', description: 'Real-time database & authentication' },
-            { name: 'MongoDB', level: 75, icon: '🍃', color: 'from-green-400 to-emerald-500', description: 'NoSQL document database' },
-            { name: 'SQLite', level: 82, icon: '📊', color: 'from-gray-400 to-gray-600', description: 'Lightweight embedded database' },
-            { name: 'Redis', level: 70, icon: '📦', color: 'from-red-400 to-pink-500', description: 'In-memory data structure store' }
+            { name: 'MSSQL', icon: '🗄️', color: 'from-blue-400 to-blue-600', description: 'Relational database design & optimization' },
+            { name: 'Firebase', icon: '🔥', color: 'from-orange-400 to-red-500', description: 'Real-time database & authentication' },
+            { name: 'MongoDB', icon: '🍃', color: 'from-green-400 to-emerald-500', description: 'NoSQL document database' },
+            { name: 'SQLite', icon: '📊', color: 'from-gray-400 to-gray-600', description: 'Lightweight embedded database' }
         ],
         marketing: [
-            { name: 'Digital Marketing', level: 85, icon: '📈', color: 'from-purple-400 to-pink-500', description: 'SEO, SEM & social media strategy' },
-            { name: 'Content Creation', level: 90, icon: '✍️', color: 'from-blue-400 to-cyan-500', description: 'Technical writing & documentation' },
-            { name: 'Brand Strategy', level: 80, icon: '🎯', color: 'from-indigo-400 to-purple-500', description: 'Brand positioning & messaging' },
-            { name: 'Analytics', level: 82, icon: '📊', color: 'from-green-400 to-teal-500', description: 'Google Analytics & performance tracking' },
-            { name: 'UI/UX Design', level: 88, icon: '🎨', color: 'from-pink-400 to-red-500', description: 'User experience & interface design' },
-            { name: 'Project Management', level: 85, icon: '📋', color: 'from-yellow-400 to-orange-500', description: 'Agile methodologies & team leadership' }
+            { name: 'Digital Marketing', icon: '📈', color: 'from-purple-400 to-pink-500', description: 'SEO, SEM & social media strategy' },
+            { name: 'Content Creation', icon: '✍️', color: 'from-blue-400 to-cyan-500', description: 'Technical writing & documentation' },
+            { name: 'Brand Strategy', icon: '🎯', color: 'from-indigo-400 to-purple-500', description: 'Brand positioning & messaging' },
+            { name: 'Analytics', icon: '📊', color: 'from-green-400 to-teal-500', description: 'Google Analytics & performance tracking' },
+            { name: 'UI/UX Design', icon: '🎨', color: 'from-pink-400 to-red-500', description: 'User experience & interface design' },
+            { name: 'Project Management', icon: '📋', color: 'from-yellow-400 to-orange-500', description: 'Agile methodologies & team leadership' }
         ]
     };
 
@@ -237,30 +227,6 @@ const Skills = () => {
                                                 </p>
                                             </div>
                                         </div>
-                                        <div className={`px-3 py-1 rounded-xl text-sm font-bold bg-gradient-to-r ${skill.color || tabConfig[activeTab].gradient} text-white shadow-lg`}>
-                                            {skill.level}%
-                                        </div>
-                                    </div>
-
-                                    {/* Enhanced Progress Bar */}
-                                    <div className="relative mb-4">
-                                        <div className="w-full bg-gray-700 rounded-full h-3 overflow-hidden">
-                                            <div 
-                                                className={`h-full rounded-full transition-all duration-1500 ease-out bg-gradient-to-r ${skill.color || tabConfig[activeTab].gradient} relative overflow-hidden`}
-                                                style={{ 
-                                                    width: skillAnimations[skill.name] ? `${skill.level}%` : '0%',
-                                                    transitionDelay: `${index * 150}ms`
-                                                }}
-                                            >
-                                                {/* Shimmer effect */}
-                                                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse"></div>
-                                            </div>
-                                        </div>
-                                        {hoveredSkill === skill.name && (
-                                            <div className="absolute -top-8 left-0 bg-gray-900 text-white text-xs px-2 py-1 rounded shadow-lg">
-                                                {skill.level}% Proficiency
-                                            </div>
-                                        )}
                                     </div>
 
                                     {/* Expandable Details */}
